@@ -32,7 +32,7 @@ app.post("/create-link", async (req, res) => {
 
     res.status(200).json({ shortLink: result.shortLink });
   } catch (error) {
-    res.status(400).json(error);
+    res.status(400).json(error.error);
   }
 });
 
